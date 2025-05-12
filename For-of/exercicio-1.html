@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício com For Of</h1>
+    <script>
+        
+        document.writeln("Questão 1:")
+
+        const numeros = [10, 20, 30, 40];
+        let soma = 0;
+
+        for (const numero of numeros) {
+            soma += numero;
+        }
+        document.writeln(soma);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 2:")
+
+        const palavra = 'programacao';
+        let contador = 0;
+
+        for (const letra of palavra) {
+            if ('aeiou'.includes(letra)) {
+                contador++;
+            }
+        }
+
+        document.writeln(`A palavra "${palavra}" tem ${contador} vogais.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 3:")
+
+        const nomes = ["ana", "joão", "maria"];
+
+        for (const nome of nomes) {
+           document.writeln(nome.toUpperCase());
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 4:")
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, ,8];
+        
+        for (const number of numbers) {
+            if (number % 2 === 0) {
+                document.writeln(number);
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 5:")
+
+        const letras = ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T'];
+        let word = ''; 
+
+        for (const letra of letras) {
+          word += letra;
+        }
+
+        document.writeln(word);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 6:")
+
+        const valor = [3, 11, 7, 15, 22, 9];
+
+        for (const valores of valor) {
+            if (valores > 10) {
+                document.writeln(valores);
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 7:")
+
+        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        for (b of a) {
+            if (b % 2 === 1) {
+                document.writeln(b);
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 8:")
+
+        const c = "javascript";
+        let counter = 0;
+
+        for (const d of c) {
+            counter += d.length;
+        }
+        document.writeln(counter);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 9:")
+
+        const e = [2, 4, 6, 8];
+
+        for (const f of e) {
+           const resultado = f * 2;
+           document.writeln(resultado);
+        }
+        
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 10:")
+
+        const item = [10, -5, 8, -2, 0, -7]
+        let sum = 0;
+
+        for (const itens of item) {
+            if (itens < 0) {
+                sum += itens;
+            }
+        }
+        document.writeln(sum)
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 11:") 
+
+        const letters = "programacao";
+
+        for (const letter of letters) {
+            if (
+                letter !== "a" &&
+                letter !== "e" &&
+                letter !== "i" &&
+                letter !== "o" &&
+                letter !== "u"
+            )
+            document.write(letter);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 12:")
+
+        const value = [3, 5, 9, 12, 14, 18, 21];
+        let accountant = 0;
+
+        for (const values of value) {
+            if (values % 3 === 0) {
+                accountant++;
+            }
+        }
+        document.writeln(`Multiplos de 3: ${accountant}`);
+    </script>
+</body>
+</html>
