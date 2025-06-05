@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício-2</title>
+</head>
+<body>
+    <h1>Exercício 2 sobre For of</h1>
+    <script>
+        document.writeln("Questão 41:");
+        const fruits = ["Maçã,", "Banana,", "Laranja,", "Uva"];
+
+        for (const fruit of fruits) {
+            document.writeln(fruit);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 42:");
+
+        const numbers = [2, 4, 6, 9];
+        let sum = 0;
+
+        for (const number of numbers) {
+            sum += number;
+        }
+        document.writeln(sum);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 43:");
+
+        const names = ["Paulo,", "Luiz,", "Mateus,", "Tiago,", "Maria,", "Paula"];
+
+        for (const name of names) {
+            document.writeln(name);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 44:");
+
+        const notes = [10, 8, 9, 6, 5];
+        
+        for (const notice of notes) {
+            if (notice < 6) {
+                document.writeln(`Nesse array o valor ${notice} é menor que 6.`);
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 45:");
+
+        const nomes = ["Ray", "Luiz", "Anthony", "André", "Lucas", "Almeida"];
+
+        for (const nome of nomes) {
+            if (nome.startsWith('A')) {
+                document.writeln(`o nome ${nome} inicial com a letra A. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 46:");
+
+        const users = ["Vinicius", "Juninho", "Gustavo", "Ana", "Gabriel", "Isabela", "Sofia", "Pedro", "Arthur"];
+
+        for (const user of users) {       
+            if (user.length >= 5) {
+                document.writeln(`o nome ${user} possui mais de 5 letras. <br>`);
+            }
+        }
+
+        document.write("<br>");
+
+        document.writeln("Questão 47:");
+
+        const prices = ["Computador: R$ 2.000", "Celular: R$: 3.000", "Bermuda: R$ 120,00", "Camiseta: R$ 150,00", "Tênis: R$: 350,00"];
+
+        for (const price of prices) {
+            document.writeln(`${price} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 48:");
+
+        const numbersEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let soma = 0;
+
+        for (const numberEven of numbersEven) {
+            if (numberEven % 2 === 0) {
+                soma += numberEven;
+            }
+        }
+        document.writeln(`A soma dos números pares é: ${soma}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 49:");
+
+        const characters = "Programação";
+
+        for (const character of characters) {
+            document.writeln(character);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 50:");
+
+        const objects = ["Garrafa", "Bermuda", "Camiseta", "Bola", "Telefone", "Televisão", "Micro-Ondas", "Geladeira", "Cama"];
+
+        for (const object of objects) {
+            document.writeln(`${object} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 51:");
+
+        const words = "Flamengo";
+
+        for (word of words.toUpperCase("Flamengo")) {
+            document.writeln(word);
+        }
+    </script>
+</body>
+</html>
