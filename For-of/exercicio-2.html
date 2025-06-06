@@ -126,6 +126,95 @@
         for (word of words.toUpperCase("Flamengo")) {
             document.writeln(word);
         }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 52:");
+
+        const numbersMultiplied = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
+
+        for (const numberMultiplied of numbersMultiplied) {
+            let calculation = numberMultiplied * 2;
+            document.writeln(calculation);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 53:");
+
+        const olderAges = [10, 12, 14, 16, 18, 20, 23, 26, 28, 30];
+
+        for (const olderAge of olderAges) {
+            if (olderAge >= 18) {
+                document.writeln(`As idade ${olderAge} são maiores de idade. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 54:");
+
+        const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+        for (const numbersArray of numberArray) {
+            if (numbersArray % 2 === 0) {
+                document.writeln(`O número ${numbersArray} é par <br>`);
+            } else {
+                document.writeln(`O número ${numbersArray} é ímpar <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 55:");
+
+        const text = ["Programar", "é", "muito", "divertido"];
+
+        for (const texts of text) {
+            document.writeln(texts);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 56:");
+
+        const nickname = ["Lucas", "Maria", "Pedro", "Sofia", "Emanuel", "João"];
+
+        for (const nicknames of nickname) {
+            let message = "⭐ " + nicknames;
+            document.writeln(`${message} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 57:");
+
+        const values = [10, -5, 7, -3, 9, -2, 4, -9];
+        let result = 0;
+
+        for (const value of values) {
+            if (value > 0) {
+                result += value;
+            }
+        }
+        document.writeln(`A soma dos números positivos é: ${result}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 58:");
+
+        const phrases = "For of é legal";
+        let counter = 0; 
+        const vowels = "aeiouAEIOUáéíóúâêîôûãõ";
+
+        for (const phrase of phrases) {
+            if (vowels.includes(phrase)) {
+                counter++;
+            }
+        }
+
+          document.writeln(`A quantidade de vogais é: ${counter}`);
+
     </script>
 </body>
 </html>
