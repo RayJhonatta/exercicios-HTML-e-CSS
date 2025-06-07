@@ -215,6 +215,32 @@
 
           document.writeln(`A quantidade de vogais é: ${counter}`);
 
+          document.writeln("<br><br>");
+
+          document.writeln("Questão 59:");
+
+          const averages = [7.5, 8.0, 9.2, 6.8, 10.0, 5.5, 6.0, 8.5];
+          let account = 0;
+
+          for (const average of averages) {
+             account += average;
+          }
+
+          const mediaGeneral = account / averages.length;
+
+          document.writeln(`A soma das médias é: ${mediaGeneral.toFixed(1)}`);
+          
+          document.writeln("<br><br>");
+
+          document.writeln("Questão 60:");
+
+          const algorithms = [2, -3, 5, -6, 9, -10, 12, -2, 15, -19, 20, -30];
+
+          for (const algorithm of algorithms) {
+            if (algorithm < 0) {
+                document.writeln(`O número ${algorithm} é negativo <br>`);
+            }
+          }
     </script>
 </body>
 </html>
