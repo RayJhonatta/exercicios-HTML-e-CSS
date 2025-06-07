@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício sobre For-in</title>
+</head>
+<body>
+    <h1>Exercício sobre For in</h1>
+    <script>
+        document.writeln("Questão 01:");
+
+        const student = {
+            nome: "Ray",
+            idade: 17,
+            curso: "Programação",
+        };
+
+        for (const students in student) {
+            document.writeln(`${students}: ` + `${student[students]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 02:");
+        let counter = 0;
+
+        const car = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2022,
+            cor: "Preto",
+        };
+
+        for (const cars in car) {
+            counter++;
+        }
+        document.writeln(`O objeto tem ${counter} propriedades`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 03:");
+        
+        const character = {
+            nome: "Mario",
+            habilidade: "Pular",
+            vida: 100,
+        };
+
+        for (const characters in character) {
+            document.writeln(`${characters} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 04:");
+
+        const points = {
+            jogador01: 15,
+            jogador02: 20,
+            jogador03: 30,
+            jogador04: 40,
+            jogador05: 50, 
+        };
+        let value = 0;
+
+        for (const point in points) {
+            value += points[point]; 
+        }
+         document.writeln(`A soma dos valores é: ${value}`); 
+
+         document.writeln("<br><br>");
+         
+         document.writeln("Questão 05:");
+          
+         const fruits = {
+            a: "Maçã",
+            b: "Banana",
+            c: "Laranja",
+            d: "Uva",
+            e: "Tomate",
+         };
+
+         for(fruit in fruits) {
+            document.writeln(`Você tem ${fruits[fruit]} <br>`);
+         }
+
+         document.writeln("<br>");
+
+         document.writeln("Questão 06:");
+
+         const notes = {
+            matematica: 8.5,
+            portugues: 7.0,
+            historia: 9.0,
+            quimica: 7.5,
+            fisica: 6.0,
+            filosofia: 6.5,
+            sociologia: 7.9,
+         };
+         let sum = 0;
+         let total = 0;
+
+         for (const note in notes) {
+            sum += notes[note];
+            total++;
+         }
+         const average = sum / total;
+         document.writeln(`A média é: ${average.toFixed(1)}`);
+
+         document.writeln("<br><br>");
+
+         document.writeln("Questão 07:");
+
+         const user = {
+            nome: "Lucas",
+            idade: 20,
+            cidade: "São Paulo",
+            profissao: "Médico",
+         };
+
+         for (const users in user) {
+            document.writeln(`${users}: ` + `${user[users]} ` + '/');
+         }
+
+         document.writeln("<br><br>");
+
+         document.writeln("Questão 08:");
+
+         const values = {
+            a: 2,
+            b: 3,
+            c: 4,
+            d: 5,
+            e: 6,
+            f: 7,
+            g: 8,
+            h: 9,
+            i: 10,
+         };
+
+         for (const value in values) {
+           const resultFinal = values[value] * 2;  
+           document.writeln(`${values[value]} * 2 = ${resultFinal} <br>`);      
+         }
+
+         document.writeln("<br><br>");
+    </script>
+</body>
+</html>
