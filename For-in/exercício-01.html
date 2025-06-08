@@ -145,6 +145,109 @@
          }
 
          document.writeln("<br><br>");
+
+         document.writeln("Questão 09:");
+
+         const animal = {
+            nome: "Leão",
+            habitat: "Savana",
+            dieta: "Carnívoro",
+            peso: 190,
+         }
+
+         for (const animals in animal) {
+            document.writeln(`O valor da propriedade ${animals} é: ` + `${animal[animals]} <br>`);
+         }
+
+         document.writeln("<br>");
+
+         document.writeln("Questão 10:");
+
+         const person = {
+            nome: "Pedro",
+            notas: {
+                matematica: 8.0,
+                portugues: 7.5, 
+                historia: 9.0,
+                geografia: 6.5,
+                quimica: 7.0,
+            },
+         }
+
+        document.writeln(`<spam>Nome:<spam> ${person.nome} <br>`);
+
+        for (const persons in person.notas) {
+            document.writeln(`${persons}: ` + `${person.notas[persons]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 11:");
+
+        const product = {
+            nome: "Notebook",
+            preco: 2500,
+            quantidade: 10,
+        };
+
+        for (const products in product) {
+            const calculation = product.preco * product.quantidade;
+            document.writeln(`O valor total do produto ${product.nome} é: R$ ${calculation.toFixed(2)}`);
+            break;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 12:");
+
+        const favoriteMovie = {
+            titulo: "Vingadores: Ultimato",
+            genero: "Ação/Ficção Científica",
+            ano: 2019,
+            assistido: true,
+        }
+
+        for (const movie in favoriteMovie) {
+            if (favoriteMovie.assistido === true ) {
+                document.writeln("Você já assistiu esse filme!!");
+                break;
+            } else {
+                document.writeln("Você ainda não assistiu esse filme!!");
+                break;
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 13:");
+
+        const game = {
+            nome: "Fifa",
+            genero: "Esporte",
+            online: true,
+            plataforma: [
+                "PlayStation",
+                "Xbox",
+                "PC",
+            ],
+        }
+
+        document.writeln(`<spam>Nome:<span> ${game.nome} <br>`);
+        document.writeln(`<spam>Gênero:<span> ${game.genero} <br>`);
+
+        for (const games in game) {
+            if (game.online === true ) {
+                document.writeln("O jogo é online! <br>");
+                break;
+            } else {
+                document.writeln("O jogo não é online! <br>");
+                break;
+            }
+        }
+
+        for (const games in game.plataforma) {
+            document.writeln(`<spam>Plataforma:<spam> ${game.plataforma[games]} <br>`);
+        }
     </script>
 </body>
 </html>
