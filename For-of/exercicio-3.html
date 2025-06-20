@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício-3</title>
+</head>
+<body>
+    <h1>Exercício 3 sobre For OF</h1>
+    <script>
+        document.writeln("Questão 60:");
+
+        const names = ["Ana", "Bruno", "Carlos", "Diana", "Eduardo"];
+
+        for (const name of names) {
+            document.writeln(`${name} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 61:");
+
+        const numbers = [2, 4, 6, 8, 10];
+
+
+        for (const number of numbers) {
+            const calculation = number * 2;
+            document.writeln(`${calculation} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 62:");
+
+        const words = ["cachorro", "gato", "pássaro", "peixe", "coelho"];
+        let counter = 0;
+
+        for (const word of words) {
+            if (word.length >= 5) {
+                counter++;
+            }
+        }
+        document.writeln(counter);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 63:");
+
+        const prices = [12.5, 30, 45.25, 10];
+        let sum = 0;
+
+        for (const price of prices) {
+            sum += price;
+        }
+        document.writeln(`A soma dos preços é: ${sum}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 64:");
+
+        const phrases = "JavaScript é uma linguagem poderosa!";
+        let contador = 0;
+
+        for (const phrase of phrases) {
+            if (phrase.includes("a") || phrase.includes("A")) {
+                contador++;
+            }
+        }
+        document.writeln(`A quantidade de letras "a" é: ${contador}`);  
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 65:");
+
+        const students = ["Lucas", "Fernanda", "Pedro", "Sofia", "João"];
+
+        for (const student of students) {
+            document.writeln(`Olá, me chamo ${student} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 66:");
+
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        for (const numero of numeros) {
+            if (numero % 2 === 0) {
+                document.writeln(`O número ${numero} é par <br>`);
+            } else {
+                document.writeln(`O número ${numero} é ímpar <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 67:");
+
+        const notes = [7, 8.5, 9, 6, 10];
+        let soma = 0;
+
+        for (const note of notes) {
+            soma += note;
+        }
+        const media = soma / notes.length;
+        document.writeln(`A média das notas é: ${media}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 68:");
+
+        const palavras = "javascript é divertido";
+
+        for (const palavra of palavras) {
+            const letra = palavra.toUpperCase();
+            document.writeln(`${letra} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 69:");
+
+        const produtos = [ 
+            { name: "Mouse", preco: 50},
+            { name: "Teclado", preco: 200},
+            { name: "Monitor", preco: 1500},
+            { name: "Impressora", preco: 800},
+            { name: "Webcam", preco: 300}
+        ]
+        let total = 0;
+
+        for (const produto of produtos) {
+            total += produto.preco;
+        }
+        document.writeln(`A média total desse preços é: ${total} <br>`);
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 70:");
+
+        const frase = "Desenvolver com JavaScript é empolgante";
+        let resultadoTotal = 0;
+        const vogais = "aeiouAEIOU";
+
+        for (const frases of frase) {
+            if(vogais.includes(frases)) {
+                resultadoTotal++;
+            }
+        }
+        document.writeln(`A quantidade de vogais é: ${resultadoTotal} <br>`);
+        
+        document.writeln("<br>");
+
+        document.writeln("Questão 71:");
+
+        const nomes = ["Roberto", "Ana", "Ferndanda", "Carlos", "Sofia"];
+
+        for (const nome of nomes) {
+            if (nome.length >= 6) {
+                document.writeln(`O nome ${nome} tem mais de 6 letras <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 72:");
+
+        const name = ["maria", "joão", "pedro", "lucas", "luiz"];
+
+        for (const names of name) {
+            const lettersCapital = names.toUpperCase();
+            document.writeln(lettersCapital);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 73:");
+
+        const numerosArray = [3, 7, -10, -2, 3, 4, -20, 12, -14];
+        let somaTotal = 0;
+
+        for (const numero of numerosArray) {
+            if (numero > 0) {
+                somaTotal += numero;
+            }
+        }
+        document.writeln(`A soma dos números positivos é: ${somaTotal} <br>`);
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 74:");
+
+        const texto = "Programar é uma habilidade valiosa";
+        let quantidade = 0;
+
+        for (const letra of texto) {
+            if (letra.includes("a") || letra.includes("A")) {
+                quantidade++;
+            }
+        }
+        document.writeln(`A quantidade de letras "a" é: ${quantidade} <br>`);
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 75:");
+
+        const alunos = [
+            { nome: "Lucas", notas: [8, 9.5, 10] },
+            { nome: "Maria", notas: [7.3, 8, 9]  },
+            { nome: "Vinicius", notas: [6.5, 7, 8] },
+        ]
+
+        for (const aluno of alunos) {
+            document.writeln(`${aluno.nome}: ${aluno.notas} <br>`);
+        }
+    </script>
+</body>
+</html>

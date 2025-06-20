@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício-2</title>
+</head>
+<body>
+    <h1>Exercício 2 sobre For In</h1>
+    <script>
+        document.writeln("Questão 14:");
+
+        const pessoa = {
+            nome: "Ana",
+            idade: 25,
+            profissao: "Engenheira",
+        }
+
+        for (const chave in pessoa) {
+            document.writeln(`${chave}: ${pessoa[chave]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 15:");
+
+        const carro = {
+            marcar: "Honda",
+            modelo: "Civic",
+            ano: 2021,
+        }
+        contador = 0;
+        
+        for (const propriedade in carro) {
+            contador++;
+        }
+        document.writeln(contador);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 16:");
+
+        const aluno = {
+            nome: "Lucas",
+            notas: [9.5, 8.0, 7.5, 6.0, 8.5],
+        };
+        let soma = 0;
+        let total = 0;
+
+        for (const chave in aluno.notas) {
+            soma += aluno.notas[chave];
+            total++;
+        }
+        const media = soma / total;
+        document.writeln(`A média das notas é: ${media.toFixed(1)} <br>`);
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 17:");
+
+        const estoque = {
+            maca: 50,
+            banana: 20,
+            pera: 10,
+            melancia: 5,
+            uva: 15,
+            laranja: 0,
+        }
+
+        for (const frutas in estoque) {
+            if(estoque[frutas] > 0) {
+                document.writeln(`${frutas} quantidade: ${estoque[frutas]} <br>`);
+            }
+        }
+        document.writeln("<br>");
+
+        document.writeln("Questão 18:");
+
+        const contatos = {
+            nome1: {
+                nome: "João",
+                telefone: "1234-5678",
+            },
+            nome2: {
+                nome: "Maria",
+                telefone: "9876-5432",
+            },
+            nome3: {
+                nome: "Pedro",
+                telefone: "4567-1234",
+            },
+            nome4: {
+                nome: "Ana",
+                telefone: "7890-1234",
+            },
+        }
+
+        for (const contato in contatos) {
+            document.writeln(`Nome: ${contatos[contato].nome}, Telefone: ${contatos[contato].telefone} <br>`);
+        }
+        document.writeln("<br>");
+
+        document.writeln("Questão 19:");
+
+        const livros = {
+            titulo: "1984",
+            autor: "George Orwell",
+            ano: 1949, 
+        }
+
+        for (const propriedade in livros) {
+            document.writeln(`O livro ${livros.titulo} de ${livros.autor} foi publicado em ${livros.ano}. <br>`);
+            break;
+        }
+        document.writeln("<br>");
+
+        document.writeln("Questão 20:");
+
+        const usuario = {
+            usuario1: {
+                nome: "Carla",
+                email: "carla@gmail.com",
+                idade: 30,
+                senha: "senha123",
+            },
+            usuario2: {
+                nome: "Luis",
+                email: "luis@gmail.com",
+                idade: 25,
+                senha: "",
+            },
+            usuario3: {
+                nome: "Vinicius",
+                email: "vinicius@gmail.com",
+                idade: 27,
+                senha: "senha12345",
+            },
+            usuario4: {
+                nome: "Thiago",
+                email: "thiago@gmail.com",
+                idade: 19,
+                senha: "",
+            }
+        }
+        
+        for (const user in usuario) {
+            if (usuario[user].senha === "") {
+                document.writeln(`` + `${usuario[user].nome} não possui senha definida. <br>`);
+            } else {
+                document.writeln(`` + `${usuario[user].nome} possui senha definida. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 21:");
+
+        const dados = {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5
+        };
+        let resultado = "";
+
+        for (const key in dados) {
+            resultado += key;
+        }
+        document.writeln(resultado);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 22:");
+
+        const funcionario = {
+            nome: "Roberto",
+            idade: 40,
+            cargo: "Gerente",
+            salario: 5000,
+        }
+
+        for (const prop in funcionario) {
+            if (typeof funcionario[prop] === "string") {
+                document.writeln(`${prop}: ${funcionario[prop]} <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 23:");
+
+        const produto = {
+            nome: "Notebook",
+            preco: 2500,
+            quantidade: 10,
+        }
+
+        for (const key in produto) {
+           const valor = produto.preco * produto.quantidade;
+           document.writeln(`O valor do estoque do produto ${produto.nome} é: R$ ${valor.toFixed(2)} <br>`);
+           break;
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 24:");
+
+        const notas = {
+            A: 90,
+            B: 80,
+            C: 70,
+            D: 60,
+            E: 50,
+            F: 40,
+            G: 30, 
+        }
+
+        for (const nota in notas) {
+            if(notas[nota] < 65) {
+                document.writeln(`Os números ${notas[nota]} são considerados reprovados. <br>`);
+            }
+        }
+        document.writeln("<br>");
+
+        document.writeln("Questão 25:");
+
+        const original = {
+            nome: "Maria",
+            idade: 28,
+            cidade: "São Paulo",
+            ativo: true,
+        }
+        const copia = {};
+
+        for (const key in original) {
+            copia[key] = original[key];
+        }
+        document.writeln(`${copia.nome} tem ${copia.idade} anos e mora em ${copia.cidade}. <br>`);
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 26:");
+
+        const person = {
+            nome: "Carlos",
+            idade: 35,
+            profissao: "Desenvolvedor",
+        }
+
+        for (const key in person) {
+            document.writeln(`${key}: ${person[key]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 27:");
+
+        const data = {
+            num1: 5,
+            num2: 10,
+            num3: 15,
+            num4: 20,
+            num5: 25,
+            num6: 30,
+        }
+        let sum = 0;
+
+        for (const key in data) {
+            sum += data[key];
+        }
+        document.writeln(`A soma dos números é: ${sum}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 28:");
+
+        const student = {
+            matematica: 8.5,
+            portugues: 7.0,
+            historia: 9.0,
+            quimica: 7.5,
+            fisica: 6.0,
+        }
+        let totalSum = 0;
+        let average = 0;
+
+        for (const key in student) {
+            const total = totalSum += student[key];
+            const count = average += student.length;
+            const media = total / count;
+        }
+        document.writeln(`A média das notas é: ${media.toFixed(1)}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 29:");
+
+        const config = {
+            config1: {
+                modo: "escuro",
+                fonte: "Arial",
+                tamanho: 16
+            },
+            config2: {
+                modo: "claro",
+                fonte: "Verdana",
+                tamanho: 14,
+                tema: true
+            },
+        }
+
+        for (const key in config) {
+            if(config[key].tema === true) {
+                document.writeln(`A configuração ${key} tem o tema ativado. <br>`);
+            } else {
+                document.writeln(`A configuração ${key} não tem o tema ativado. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 30:");
+
+        const numeros = {
+            num1: 1,
+            num2: 2,
+            num3: 3,
+            num4: 4,
+            num5: 5,
+        }
+
+        for (const key in numeros) {
+            document.writeln(`${numeros[key]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 31:");
+
+        const capital = {
+            brasil: "Brasília",
+            argentina: "Buenos Aires",
+            chile: "Santiago",
+            uruguai: "Montevidéu",
+            paraguai: "Assunção",
+            peru: "Lima",
+            colombia: "Bogotá",
+        }
+
+        for (const key in capital) {
+            document.writeln(`A capital do ${key} é ${capital[key]}. <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 32:");
+
+        const alunos = {
+            Ana: true,
+            Lucas: false,
+            Maria: true,
+            João: false,
+            Pedro: true,
+            Carla: true,   
+            Luis: false,
+            Pedro: true,
+            Ariel: true,
+            Sofia: false,
+        }
+
+        for (const aluno in alunos) {
+            if(alunos[aluno] === true) {
+                document.writeln(`${aluno} está aprovado. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 33:");
+
+        const filmes = {
+            titulo: "Inception",
+            diretor: "Christopher Nolan",
+            ano: 2010,
+            genero: "Sci-Fi",
+        }
+        let counter = 0;
+
+        for (const key in filmes) {
+            counter++;
+        }
+        document.writeln(counter);
+
+       document.writeln("<br><br>");
+
+        document.writeln("Questão 34:");
+
+       const idiomas = {
+            pt: "Português",
+            en: "Inglês",
+            es: "Espanhol",
+            fr: "Francês",
+            de: "Alemão",
+            it: "Italiano",
+       }
+       const linguas = [];
+
+       for (const key in idiomas) {
+            linguas[key] = idiomas[key];
+            document.writeln(`${key} <br>`);
+       }
+
+         document.writeln("<br>");
+
+        document.writeln("Questão 35:");
+
+        const produtos = {
+            arroz: 10,
+            feijao: 23,
+            macarrao: 15,
+            carne: 20,
+            leite: 5,
+            ovo: 12,
+        }
+
+        for (const key in produtos) {
+            const valor = produtos[key] / 10 
+            document.writeln(`O desconto de 10% do produto ${key} é: R$ ${valor.toFixed(2)} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 36:");
+
+        const user = {
+            online: true,
+            pagou: false,
+            premium: true,
+            ativo: true,
+        }
+        let quantidade = 0;
+
+        for (const key in user) {
+            if (user[key] === true) {
+                quantidade++;
+            }
+        }
+        document.writeln(quantidade);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 37:");
+
+        const perfil = {
+            nome: "João",
+            idade: 30,
+            cidade: "Rio de Janeiro",
+            profissao: "Engenheiro",
+        }
+
+        for (const key in perfil) {
+            document.writeln(`${perfil.nome} tem ${perfil.idade} e mora em ${perfil.cidade} e trabalha como ${perfil.profissao} <br>`);
+            break;
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 38:");
+
+        const registro = {
+            nome: "Gabriel",
+            idade: 22,
+            cidade: "Belo Horizonte",
+        }
+
+        for (const key in registro) {
+            document.writeln(`${key.toUpperCase()}: ${registro[key]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 39:");
+
+        const datas = {
+            nome: "Felipe",
+            idade: 28,
+            peso: 75,
+            ativo: true,
+            cidade: "Curitiba"
+        };
+
+        for (const key in datas) {
+            if (typeof datas[key] === "number") {
+                document.writeln(`${key}: ${datas[key]} <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 40:");
+
+        const computador = {
+            marca: "Dell",
+            memoria: "16GB",
+            armazenamento: "512GB SSD",
+        }
+
+        for (const key in computador) {
+            document.writeln(`${key}: ${computador[key]} <br>`);
+        }
+    </script>
+</body>
+</html>
