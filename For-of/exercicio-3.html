@@ -213,6 +213,41 @@
         for (const aluno of alunos) {
             document.writeln(`${aluno.nome}: ${aluno.notas} <br>`);
         }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 76:");
+
+        const temperaturas = [0, 20, 30, 35, 40];
+
+        for (const temperatura of temperaturas) {
+            const resultado = temperatura * 1.8 + 32;
+            document.writeln(`A temperatura ${temperatura}°C em Fahrenheit é: ${resultado}°F <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 77:");
+
+        const usuario = ["Ana", "João", "Lu", "Carlos", "Fernanda", "Vi"];
+        
+        for (const user of usuario) {
+            if(user.length <= 3) {
+                document.writeln(`Nome muito curto encontrado: ${user} <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 78:");
+
+        const emails = ["maria@gmail.com", "joao", "ana@gmail.com", "luiz@gmail.com", "pedro"];
+
+        for (const email of emails) {
+            if(email.includes("@")) {
+                document.writeln(`${email} <br>`);
+            }
+        }
     </script>
 </body>
 </html>

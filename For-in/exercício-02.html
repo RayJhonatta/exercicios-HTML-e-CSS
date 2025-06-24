@@ -509,6 +509,224 @@
         for (const key in computador) {
             document.writeln(`${key}: ${computador[key]} <br>`);
         }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 41:");
+
+        const movie = {
+            titanic: 9.5,
+            inception: 7.3,
+            interstellar: 7.6,
+            avatar: 7.8,
+            vingadores: 9.2,
+            batman: 8.7,
+            homemAranha: 8.5,
+        }
+
+        for (const key in movie) {
+            if (movie[key] > 8) {
+                document.writeln(`O filme ${key} tem uma avaliação acima de 8. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 42:");
+
+        const disciplinas = {
+            matematica: 7,
+            portugues: 8,
+            historia: 6,
+            geografia: 9,
+            quimica: 5,
+            ingles: 10,
+            fisica: 4,
+        }
+        let totalSoma = 0;
+
+        for (const key in disciplinas) {
+           totalSoma += disciplinas[key];
+        }
+        document.writeln(`A soma das faltas é: ${totalSoma}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 43:");
+
+        const car = {
+            modelo: "Civic",
+            marca: "Honda",
+            ano: 2021
+        };
+
+        for (const key in car) {
+            document.writeln(`O carro é um ${car.marca} ${car.modelo} do ano ${car.ano}.`);
+            break;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 44:");
+
+        const pessoas = {
+            Ana: 22,
+            Bruno: 25,
+            Carla: 19, 
+            Daniel: 30,
+            Eduardo: 28,
+            Fernanda: 24,
+        }
+        const nomes = [];
+        const idade = [];
+
+        for (const key in pessoas) {
+            nomes[key] = key;
+            idade[key] = pessoas[key];
+            document.writeln(`${nomes[key]} tem ${idade[key]} anos. <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 45:");
+
+        const frutas = {
+            banana: 10,
+            maca: 5,
+            laranja: 8,
+            uva: 12,
+            abacaxi: 6,
+        };
+        let menorQuantidade = Infinity;
+        let frutaMenor = "";
+
+        for (const key in frutas) {
+            if (frutas[key] < menorQuantidade) {
+                menorQuantidade = frutas[key];
+                frutaMenor = key;
+                
+            }
+        }
+        document.writeln(`A fruta com menor quantidade é ${frutaMenor}, com ${menorQuantidade} unidades.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 46:");
+
+        const number = {
+            num1: 10,
+            num2: 20,
+            num3: 30,
+            num4: 40,
+            num5: 50,
+        }
+
+        const doubleNumber = {};
+
+        for (const key in number) {
+            doubleNumber[key] = number[key] * 2;
+            document.writeln(`${key}: ${doubleNumber[key]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 47:");
+
+        const cliente = {
+            cliente1: {
+                nome: "João",
+                status: true,
+            },
+            cliente2: {
+                nome: "Maria",
+                status: false,
+            },
+            cliente3: {
+                nome: "Pedro",
+                status: true,
+            },
+            cliente4: {
+                nome: "Ana",
+                status: false,
+            },
+        }
+
+        for (const key in cliente) {
+            if(cliente[key].status === true) {
+                document.writeln(`O usuário ${cliente[key].nome} está online. <br>`);
+            } else {
+                document.writeln(`O usuário ${cliente[key].nome} está offline. <br>`);
+            }     
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 48:");
+
+        const materials = {
+            matematica: 8,
+            portugues: 7,
+            historia: 10,
+            quimica: 6,
+            fisica: 5,
+        };
+
+        for (const key in materials) {
+            if(materials[key] >= 7) {
+                document.writeln(`A disciplina ${key} tem nota acima de 7. <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 49:");
+
+        const numbers = {
+            num1: 1,
+            num2: 2,
+            num3: 3,
+            num4: 4,
+            num5: 5,
+            num6: 6,
+            num7: 7,
+            num8: 8,
+            num9: 9,
+            num10: 10,
+        };
+
+        const result = {};
+
+        for (const key in numbers) {
+            if(numbers[key] % 2 === 0) {
+                result[key] = "par";
+            } else {
+                result[key] = "ímpar";
+            }
+            document.writeln(`${numbers[key]}: ${result[key]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 50:");
+
+        const celular = {
+            marca: "Samsung",
+            modelo: "Galaxy S21",
+            ano: 2021,
+            cor: "Preto",
+            preco: 3500,
+        }
+        let html = "<ul>";
+
+        for (const key in celular) {
+            html += `<li>${key}: ${celular[key]}</li>`;
+        }
+        html += "</ul>";
+
+        document.writeln(html);
+
+        document.writeln("<br><br>");
+
     </script>
 </body>
 </html>
