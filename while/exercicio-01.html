@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <h1>Exercício sobre While</h1>
+    <script>
+        document.writeln("Questão 1:");
+
+        let number = 1;
+
+        while (number <= 10) {
+            document.writeln(`${number} <br>`);
+            number++;
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 2:");
+
+        let numero = 0;
+        
+       while (numero <= 20) {
+        numero++;
+            if (numero % 2 === 0) {
+                document.writeln(`${numero} <br>`);
+            }
+       }
+
+       document.writeln("<br>");
+
+       document.writeln("Questão 3:");
+
+       let valor = 1;
+       let soma = 0;
+
+       while (valor <= 100) {
+        soma += valor;
+        valor++;
+       }
+       document.writeln(`A soma total: ${soma}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 4:");
+
+        let registro = 101;
+
+        while (registro % 7 !== 0) {
+            registro++;
+        }
+        document.writeln(`O primeiro número maior que 100 que é divisível por 7 é: ${registro}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 5:");
+
+        let contador = 0;
+        let dado = 0;
+
+        while (dado !== 6) {
+            dado = Math.floor(Math.random() * 6) + 1; 
+            contador++;
+        }
+
+        document.writeln(`Foram necessários ${contador} jogadas para sair o número 6.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 6:");
+
+        let resultado = prompt("Digite a senha correta:");
+
+        while (resultado === "1234") {
+            document.writeln("Senha correta! Acesso permitido.");
+            break;
+           if (resultado !== "1234") {
+                resultado = prompt("Senha incorreta! Tente novamente:");
+            }
+        }
+        
+        document.writeln("<br><br>");
+        
+        document.writeln("Questão 7:");
+
+        let value = 10;
+
+        while (value >= 1) {
+            document.writeln(`${value} <br>`);
+            value--;
+        }
+        
+        document.writeln("<br>");
+
+        document.writeln("Questão 8:");
+
+        let num = 1;
+
+        while (num <= 5) {
+            document.writeln(`Estudando JavaScript <br>`);
+            num++;
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 9:");
+
+        let n = 1;
+        let sum = 0;
+
+        while (n <= 10) {
+            sum += n;
+            n++;
+        }
+        document.writeln(`A soma dos números de 1 a 10 é: ${sum}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 10:");
+
+        let input = prompt("Digite um número:");
+
+        while (input !== "0") {
+            input = prompt("Digite o número novamente:");
+        }
+            document.writeln("O número está correto!!");
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 11:");
+
+        let num1 = 1;
+
+        while (num1 <= 10) {
+            if (num1 * 5) {
+                document.writeln(`5 x ${num1} = ${num1 * 5} <br>`);
+            }
+            num1++;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 12:");
+
+        let quantidade = 0;
+
+        let mensagem = prompt("Digite um número:");
+
+        while (mensagem >= "0") {
+            quantidade++;
+            mensagem = prompt("Digite o número novamente");
+        }
+        quantidade++;
+        document.writeln(`A quantidade de números digitados é: ${quantidade}`);
+  
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 13:");
+
+        let numero1 = 50;
+
+        while (numero1 <= 60) {
+            document.writeln(`${numero1} <br>`);
+            numero1++;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 14:");
+
+        let numero2 = 1;
+
+        while (numero2 <= 30) {
+            if (numero2 * 3) {
+                document.writeln(`${numero2} x 3 = ${numero2 * 3} <br>`);
+                numero2++;
+            }
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 15:");
+    </script>
+</body>
+</html>
