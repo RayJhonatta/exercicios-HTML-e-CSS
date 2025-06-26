@@ -184,6 +184,154 @@
         document.writeln("<br><br>");
 
         document.writeln("Questão 15:");
+
+        let mensagem2 = prompt("Digite sua idade");
+
+        while (mensagem2 < 18) {
+            mensagem2 = prompt("Digite sua idade novamente");
+        }
+        document.writeln("Acesso liberado!");
+
+        document.writeln("<br><br>");
+        
+        document.writeln("Questão 16:");
+
+        let numero3 =  1;
+
+        while (numero3 < 20) {
+            numero3++;
+            if (numero3 % 2 === 1) {
+                document.writeln(`Os números impares são: ${numero3} <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 17:");
+
+        let mensagem3 = prompt("Você quer continuar? (sim/não)");
+
+        while (mensagem3 === "sim" || mensagem3 === "Sim") {
+            mensagem3 = prompt("Você quer continuar? (sim/não)");
+        }
+        if (mensagem3 === "não" || mensagem3 === "Não") {
+            document.writeln("Você escolheu não continuar.");
+        } 
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 18:");
+
+        let fatorial = 1;
+
+        while (fatorial <= 10) {
+            let resultadoFatorial = 1;
+            for (let i = 1; i <= fatorial; i++) {
+                resultadoFatorial *= i;
+            }
+            document.writeln(`O fatorial de ${fatorial} são os números: ${resultadoFatorial} <br>`);
+            fatorial++;
+        } 
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 19:");
+
+        let tentativas = 3;
+        let senha = "2345";
+        let mensagem4 = prompt("Digite a senha:");
+
+        while (mensagem4 !== senha && tentativas > 1) { 
+            tentativas--;
+            mensagem4 = prompt(`Senha incorreta. Você tem mais ${tentativas} tentativas:`);
+        }
+
+        if (mensagem4 === senha) {
+            document.writeln("Senha correta! Acesso permitido.");
+        } else {
+            document.writeln("Número de tentativas excedido. Conta bloqueada.");
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 20:");
+
+        let numeroSecreto = 47;
+        let mensagem5 = prompt("Digite um número entre 1 a 50");
+
+        while (mensagem5 <= numeroSecreto) {
+            mensagem5 = prompt("Você digitou um número menor que o número secreto. Tente novamente:");
+        }
+        if (mensagem5 >= numeroSecreto) {
+            mensagem5 = prompt("Você digitou um número maior que o número secreto. Tente novamente:");
+        }
+        if (mensagem5 == numeroSecreto) {
+            document.writeln("Parabéns! Você acertou o número secreto.");
+        } 
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 21:");
+
+        let mensagem6 = Number(prompt("Digite um número"));
+        let pairCounter = 0;
+        let oddCounter = 0;
+
+        while (mensagem6 >= 0) {
+            if (mensagem6 % 2 === 0) {
+                pairCounter++;
+            } else {
+                oddCounter++;
+            }
+            mensagem6 = Number(prompt("Digite um novo número (negativo para sair):"));
+        } 
+        document.writeln(`Você digitou ${pairCounter} números pares e ${oddCounter} números ímpares.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 22:");
+
+        let mensagem7 = prompt("Digite um número:");
+        let contador2 = 0; 
+
+        while (mensagem7 >= 0) {
+            if (mensagem7 % 5 === 0) {
+                contador2++;
+                mensagem7 = prompt("Digite um novo número (negativo para sair):");
+            } else {
+                mensagem7 = prompt("Digite um novo número (negativo para sair):");
+            }
+        }
+        document.writeln(`Você digitou ${contador2} números múltiplos de 5.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 23:");
+
+        let sorteio = Math.floor(Math.random() * 20) + 1;
+        let contador3 = 0;
+
+        while (sorteio !== 13) {
+            sorteio = Math.floor(Math.random() * 19) + 1;
+            contador3++;
+        }
+            document.writeln(`O número sorteado foi 13 após ${contador3} tentativas.`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 24:");
+
+        let mensagem8 = prompt("Digite um número");
+        let contador5 = 0;
+
+        while (mensagem8 !== "0") {
+            contador5++;
+            mensagem8 = prompt("Digite um novo número (0 para sair):");
+        }
+        document.writeln(`Você digitou ${contador5} números.`);
+
+        document.writeln("<br><br>");
+
     </script>
 </body>
 </html>
