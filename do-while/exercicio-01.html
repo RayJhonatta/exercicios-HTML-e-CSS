@@ -8,6 +8,127 @@
 <body>
     <h1>Exercício sobre Do While</h1>
     <script>
+        document.writeln("Questão 01:");
+
+        let mensagem = prompt("Digite um número:");
+        let soma = 0;
+
+        do {
+            soma += Number(mensagem);
+            mensagem = prompt("Digite outro número (para sair coloque um número negativo)");
+        } while (Number(mensagem) > 0);
+        document.writeln(`A soma dos números é: ${soma}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 02:");
+
+        let senha = "1234";
+        let mensagem2;
+        
+        do {
+            mensagem2 = prompt("Digite uma senha:");
+            if (mensagem2 !== senha) {
+                document.writeln("Senha incorreta! Tente novamente.");
+            }
+        } while (mensagem2 !== senha);
+        document.writeln("Senha correta!");
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 03:");
+
+        let mensagem3 = Number(prompt("Digite um número:"));
+
+        do { 
+            document.writeln(`Contando ${mensagem3} <br>`);
+            mensagem3--;
+        }  while (mensagem3 >= 0);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 04:");
+
+        let numero;
+    let pares = 0;
+    let impares = 0;
+
+    do {
+        numero = Number(prompt("Digite um número (0 para sair):"));
+
+        if (numero !== 0) {
+            if (numero % 2 === 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+    } while (numero !== 0);
+
+    document.writeln(`Quantidade de números pares: ${pares}\nQuantidade de números ímpares: ${impares}`);
+
+    document.writeln("<br><br>");
+
+    document.writeln("Questão 05:");
+
+    let mensagem5 = prompt("Digite uma mensagem (para sair, digite 'sair'):");
+
+    do {
+        if (mensagem5 !== "sair") {
+            document.writeln(`A palavra que você digitou foi: ${mensagem5} <br>`);
+            mensagem5 = prompt(`Digite outra mensagem (para sair, digite 'sair'):`);
+        }
+    } while (mensagem5 !== "sair");
+    document.writeln("Você saiu do loop!");
+        
+    document.writeln("<br><br>");
+
+    document.writeln("Questão 06:");
+
+    let mensagem6;
+    let contador = 0;
+
+    do {
+        mensagem6 = Number(prompt("Digite outro número (para sair, digite 0):"));
+
+        if (mensagem6 !== 0 && mensagem6 % 5 === 0) {
+            contador++;
+        }
+    } while (mensagem6 !== 0);
+    document.writeln(`A quantidade de números múltiplos de 5 digitados é: ${contador}`);
+
+    document.writeln("<br><br>");
+
+    document.writeln("Questão 07:");
+
+    let mensagem7 = Number(prompt("Digite um número: (entre 1 a 100)"));
+    let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    let tentativas = 7;
+
+    do {
+        if (mensagem7 < numeroAleatorio) {
+            tentativas--;
+            if(tentativas === 0) {
+                document.writeln(`Fim de jogo! O número era ${numeroAleatorio}.`);
+                break;
+            }
+            mensagem7 = Number(prompt(`O número é maior que ${mensagem7}, você possui ${tentativas} tentativa(s). Tente novamente:`));
+           
+        } else if (mensagem7 > numeroAleatorio) {
+            tentativas--;
+            if(tentativas === 0) {
+                document.writeln(`Fim de jogo! O número era ${numeroAleatorio}.`);
+                break;
+            }
+            mensagem7 = Number(prompt(`O número é menor que ${mensagem7}, você possui ${tentativas} tentativa(s). Tente novamente:`));
+        }
+    } while (mensagem7 !== numeroAleatorio);
+    
+    if (mensagem7 === numeroAleatorio) {
+        document.writeln(`Você acertou o número ${numeroAleatorio} e restavam ${tentativas} tentativas!`);
+    }
+    
 
     </script>
 </body>
